@@ -1,21 +1,47 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Field, reduxForm } from 'redux-form';
 
-class App extends Component {
+class UserForm extends Component {
   render() {
+    const { handleSubmit } = this.props;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <Field name="name" component="input" type="text" />
+        </div>
+        <div>
+          <label htmlFor="name">Preferred Formatting</label>
+          <Field name="preference" component="select">
+            <option />
+            <option value="tabs">Tabs</option>
+            <option value="spaces">Spaces</option>
+          </Field>
+        </div>
+        <div>
+          <label htmlFor="terms">Accept Terms?</label>
+          <Field name="termsAccepted" component="input" type="checkbox" />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     );
   }
 }
 
-export default App;
+class UserFormContainer extends React.Component {
+  submit = (values) => {
+    console.log(values);
+  }
+
+  render() {
+    return (
+      <UserForm onSubmit={this.submit} />
+    );
+  }
+}
+
+UserForm = reduxForm({
+  form: 'user'
+})(UserForm);
+
+export default UserFormContainer;
