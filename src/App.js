@@ -19,7 +19,7 @@ class UserForm extends Component {
           </Field>
         </div>
         <div>
-          <label htmlFor="terms">Accept Terms?</label>
+          <label htmlFor="terms">Sign up to newsletter?</label>
           <Field name="termsAccepted" component="input" type="checkbox" />
         </div>
         <button type="submit">Submit</button>
