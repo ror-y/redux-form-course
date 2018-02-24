@@ -6,7 +6,7 @@ const customTextInput = (props) => {
   return (
     <div>
       <label htmlFor="name">Name</label>
-      <input {...props.input} type="text" />
+      <input {...props.input} name="name" type="text" />
     </div>
   )
 }
@@ -27,8 +27,8 @@ const customSelectInput = (props) => {
 const customCheckboxInput = (props) => {
   return (
     <div>
-      <label htmlFor="terms">Sign up to newsletter?</label>
-      <input {...props.input} name="terms" type="checkbox" />
+      <label htmlFor="newsletter">Sign up to newsletter?</label>
+      <input {...props.input} name="newsletter" type="checkbox" />
     </div>
   )
 }
@@ -40,7 +40,7 @@ class UserForm extends Component {
       <form onSubmit={handleSubmit}>
         <Field name="name" component={customTextInput} type="text" />
         <Field name="preference" component={customSelectInput} />
-        <Field name="termsAccepted" component={customCheckboxInput} type="checkbox" />
+        <Field name="newsletter" component={customCheckboxInput} type="checkbox" />
         <button type="submit">Submit</button>
       </form>
     );
