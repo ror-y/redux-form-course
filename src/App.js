@@ -11,7 +11,7 @@ class UserForm extends Component {
           <Field name="name" component="input" type="text" />
         </div>
         <div>
-          <label htmlFor="name">Preferred Formatting</label>
+          <label htmlFor="preference">Preferred Formatting</label>
           <Field name="preference" component="select">
             <option />
             <option value="tabs">Tabs</option>
@@ -19,8 +19,8 @@ class UserForm extends Component {
           </Field>
         </div>
         <div>
-          <label htmlFor="terms">Sign up to newsletter?</label>
-          <Field name="termsAccepted" component="input" type="checkbox" />
+          <label htmlFor="newsletter">Sign up to newsletter?</label>
+          <Field name="newsletter" component="input" type="checkbox" />
         </div>
         <button type="submit">Submit</button>
       </form>
