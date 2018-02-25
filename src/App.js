@@ -7,11 +7,11 @@ class UserForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name">Name</label>
+          <label>Name</label>
           <Field name="name" component="input" type="text" />
         </div>
         <div>
-          <label htmlFor="preference">Preferred Formatting</label>
+          <label>Preferred Formatting</label>
           <Field name="preference" component="select">
             <option />
             <option value="tabs">Tabs</option>
@@ -19,7 +19,7 @@ class UserForm extends Component {
           </Field>
         </div>
         <div>
-          <label htmlFor="newsletter">Sign up to newsletter?</label>
+          <label>Sign up to newsletter?</label>
           <Field name="newsletter" component="input" type="checkbox" />
         </div>
         <button type="submit">Submit</button>
