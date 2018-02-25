@@ -30,7 +30,7 @@ class CustomCheckboxInput extends Component {
   }
 
   componentDidMount() {
-    console.log('I am stateful!')
+    console.log('I am a class component!')
   }
 
   render() {
