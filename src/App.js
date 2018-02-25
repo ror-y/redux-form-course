@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 
-const customTextInput = (props) => {
-  console.log('props: ', props);
+const customInput = (props) => {
   return (
     <div>
       <label>{props.label}</label>
@@ -11,7 +10,7 @@ const customTextInput = (props) => {
   )
 }
 
-const customSelectInput = (props) => {
+const customSelect = (props) => {
   return (
     <div>
       <label>{props.label}</label>
@@ -24,15 +23,6 @@ const customSelectInput = (props) => {
   )
 }
 
-const customCheckboxInput = (props) => {
-  return (
-    <div>
-      <label>{props.label}</label>
-      <input {...props.input} type={props.type} />
-    </div>
-  )
-}
-
 class UserForm extends Component {
   render() {
     const { handleSubmit } = this.props;
@@ -40,18 +30,18 @@ class UserForm extends Component {
       <form onSubmit={handleSubmit}>
         <Field
           name="name"
-          component={customTextInput}
+          component={customInput}
           type="text"
           label="Name"
         />
         <Field
           name="preference"
-          component={customSelectInput}
+          component={customSelect}
           label="Preferred Formatting"
         />
         <Field
           name="newsletter"
-          component={customCheckboxInput}
+          component={customInput}
           type="checkbox"
           label="Sign up to Newsletter?"
         />
