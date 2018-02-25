@@ -24,13 +24,23 @@ const customSelectInput = (props) => {
   )
 }
 
-const customCheckboxInput = (props) => {
-  return (
-    <div>
-      <label htmlFor="newsletter">Sign up to newsletter?</label>
-      <input {...props.input} name="newsletter" type="checkbox" />
-    </div>
-  )
+class CustomCheckboxInput extends Component {
+  constructor(props) {
+    super(props)
+  }
+
+  componentDidMount() {
+    console.log('I am stateful!')
+  }
+
+  render() {
+    return (
+      <div>
+        <label htmlFor="newsletter">Sign up to newsletter?</label>
+        <input {...this.props.input} name="newsletter" type="checkbox" />
+      </div>
+    )
+  }
 }
 
 class UserForm extends Component {
@@ -40,7 +50,7 @@ class UserForm extends Component {
       <form onSubmit={handleSubmit}>
         <Field name="name" component={customTextInput} type="text" />
         <Field name="preference" component={customSelectInput} />
-        <Field name="newsletter" component={customCheckboxInput} type="checkbox" />
+        <Field name="newsletter" component={CustomCheckboxInput} type="checkbox" />
         <button type="submit">Submit</button>
       </form>
     );
