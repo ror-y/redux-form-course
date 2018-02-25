@@ -6,7 +6,7 @@ const customTextInput = (props) => {
   return (
     <div>
       <label htmlFor="name">Name</label>
-      <input {...props.input} name="name" type="text" />
+      <input {...props.input} type={props.type} />
     </div>
   )
 }
@@ -15,7 +15,7 @@ const customSelectInput = (props) => {
   return (
     <div>
       <label htmlFor="preference">Preferred Formatting</label>
-      <select {...props.input} name="preference">
+      <select {...props.input}>
         <option />
         <option value="tabs">Tabs</option>
         <option value="spaces">Spaces</option>
@@ -25,10 +25,6 @@ const customSelectInput = (props) => {
 }
 
 class CustomCheckboxInput extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   componentDidMount() {
     console.log('I am a class component!')
   }
@@ -37,7 +33,7 @@ class CustomCheckboxInput extends Component {
     return (
       <div>
         <label htmlFor="newsletter">Sign up to newsletter?</label>
-        <input {...this.props.input} name="newsletter" type="checkbox" />
+        <input {...this.props.input} type={this.props.type} />
       </div>
     )
   }
