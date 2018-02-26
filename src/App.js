@@ -6,9 +6,16 @@ class RegisterFormContainer extends Component {
     console.log(values);
   }
 
+  getInitialValues() {
+    return {
+      preference: 'spaces',
+      newsletter: true
+    }
+  }
+
   render() {
     return (
-      <RegisterForm onSubmit={this.submit} />
+      <RegisterForm onSubmit={this.submit} initialValues={this.getInitialValues()} />
     );
   }
 }
