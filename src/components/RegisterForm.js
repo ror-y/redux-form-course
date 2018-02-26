@@ -44,7 +44,7 @@ class RegisterForm extends Component {
 }
 
 RegisterForm = reduxForm({
-  form: 'user',
+  form: 'register',
   validate,
   warn
 })(RegisterForm);
