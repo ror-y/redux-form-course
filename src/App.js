@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import UserForm from './components/UserForm';
+import RegisterForm from './components/RegisterForm';
 
-class UserFormContainer extends Component {
+class RegisterFormContainer extends Component {
   submit = (values) => {
     console.log(values);
   }
 
   render() {
     return (
-      <UserForm onSubmit={this.submit} />
+      <RegisterForm onSubmit={this.submit} />
     );
   }
 }
 
-export default UserFormContainer;
+export default RegisterFormContainer;
