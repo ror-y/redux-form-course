@@ -7,11 +7,11 @@ import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
 const reducers = {
-    form: formReducer
+  form: formReducer
 }
 
 const reducer = combineReducers(reducers);
-let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__());
+let store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 registerServiceWorker();
