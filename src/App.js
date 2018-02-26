@@ -15,7 +15,10 @@ class RegisterFormContainer extends Component {
 
   render() {
     return (
-      <RegisterForm onSubmit={this.submit} initialValues={this.getInitialValues()} />
+      <RegisterForm
+        onSubmit={this.submit}
+        initialValues={this.getInitialValues()}
+      />
     );
   }
 }
