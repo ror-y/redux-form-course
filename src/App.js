@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import UserForm from './components/UserForm';
 
-class UserFormContainer extends React.Component {
+class UserFormContainer extends Component {
   submit = (values) => {
     console.log(values);
   }
