@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { customInput, customSelect } from './fields';
+import {
+  required,
+  minLength,
+  maxLength,
+  nonWordCharacters
+} from '../validation';
 
 class RegisterForm extends Component {
   render() {
@@ -8,10 +14,28 @@ class RegisterForm extends Component {
     return (
       <form onSubmit={handleSubmit}>
         <Field
-          name="name"
+          name="firstname"
           component={customInput}
           type="text"
-          label="Name"
+          label="First Name"
+          validate={[required]}
+          warn={[nonWordCharacters]}
+        />
+        <Field
+          name="surname"
+          component={customInput}
+          type="text"
+          label="Surname"
+          validate={[required]}
+          warn={[nonWordCharacters]}
+        />
+        <Field
+          name="username"
+          component={customInput}
+          type="text"
+          label="Username"
+          validate={[required, minLength, maxLength]}
+          warn={[nonWordCharacters]}
         />
         <Field
           name="preference"
