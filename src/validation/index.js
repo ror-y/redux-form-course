@@ -10,6 +10,6 @@ export const maxLength = value => (
   value.length > 10 ? 'Value is too long' : undefined
 );
 
-export const nonWordCharacters = value => (
-  /\W/g.test(value) ? "Non-word character typed. Made a typo?" : undefined
+export const matchesPassword = (value, allValues) => (
+  value === allValues.password ? undefined : 'Passwords must match'
 );
