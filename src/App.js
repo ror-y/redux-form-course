@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import RegisterForm from './components/RegisterForm';
+import { asyncUsernameCheck } from './validation';
 
 class RegisterFormContainer extends Component {
   submit = (values) => {
     console.log(values);
+    asyncUsernameCheck(values);
   }
 
   getInitialValues() {
