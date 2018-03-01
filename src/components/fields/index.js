@@ -18,7 +18,7 @@ export const customInput = (props) => {
   return (
     <div className={cx(
       "custom-input-container",
-      { "custom-input-container--checkbox": type === "checkbox" },
+      { "flex-row-reverse": type === "checkbox" },
       { "dirty": meta.dirty },
       getValidityClassName(meta))}
     >
@@ -34,7 +34,6 @@ export const customSelect = (props) => {
     <div className="custom-select-container">
       <label>{props.label}</label>
       <select {...props.input}>
-        <option />
         <option value="tabs">Tabs</option>
         <option value="spaces">Spaces</option>
       </select>
