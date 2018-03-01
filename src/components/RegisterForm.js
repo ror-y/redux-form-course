@@ -39,14 +39,14 @@ class RegisterForm extends Component {
         <Field
           name="password"
           component={customInput}
-          type="text"
+          type="password"
           label="Password"
           validate={[required]}
         />
         <Field
           name="confirmPassword"
           component={customInput}
-          type="text"
+          type="password"
           label="Confirm Password"
           validate={[required, matchesPassword]}
         />
