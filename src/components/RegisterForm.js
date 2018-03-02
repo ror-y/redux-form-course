@@ -5,7 +5,6 @@ import {
   required,
   minLength,
   maxLength,
-  nonWordCharacters
 } from '../validation';
 import './RegisterForm.css'
 
