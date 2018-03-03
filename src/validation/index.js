@@ -16,11 +16,14 @@ export const matchesPassword = (value, allValues) => (
   value === allValues.password ? undefined : 'Passwords must match'
 );
 
-export const asyncUsernameCheck = (values) => {
-  if (['kent', 'andy', 'john', 'joel'].includes(values.username)) {
-    throw new SubmissionError({
-      username: 'Username already taken',
-      _error: 'Login failed!'
-    })
-  }
+export const asyncValidate = (values) => {
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+  return sleep(1000).then(() => {
+
+    if (['kent', 'andy', 'john', 'joel'].includes(values.username)) {
+      throw {
+        username: 'Username already taken',
+      }
+    }
+  })
 }
