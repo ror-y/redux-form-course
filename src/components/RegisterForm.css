@@ -14,19 +14,19 @@ form {
 }
 
 /* Thick black bottom border applied to all text inputs */
-input:not([type="checkbox"]) {
+input:not([type='checkbox']) {
   border-width: 0;
   border-bottom: 3px solid black;
   border-radius: 0;
 }
 
 /* Transition the text input label's font-size, color, and position when it moves */
-input:not([type="checkbox"]) + label {
+input:not([type='checkbox']) + label {
   transition: all 0.2s;
 }
 
 /* Position the label so that it looks like a placeholder; disable clicking/tapping */
-input:not([type="checkbox"]) + label {
+input:not([type='checkbox']) + label {
   position: absolute;
   left: 0;
   top: 0;
@@ -36,8 +36,8 @@ input:not([type="checkbox"]) + label {
 
 /* Move the text input label up above the input when the input is focused */
 /* Also, move the text input label above the input when there is content inside the input, so that the label doesn't obscure the content */
-input:not([type="checkbox"]):focus + label,
-.dirty input:not([type="checkbox"]) + label {
+input:not([type='checkbox']):focus + label,
+.dirty input:not([type='checkbox']) + label {
   font-size: 12px;
   top: -12px;
   color: black;
@@ -80,7 +80,7 @@ select {
 }
 
 select,
-input:not([type="checkbox"]),
+input:not([type='checkbox']),
 button {
   width: 100%;
 }
@@ -107,7 +107,7 @@ button {
 }
 
 .error-text::before {
-  content: "";
+  content: '';
   border-color: transparent transparent red transparent;
   width: 0;
   height: 0;
