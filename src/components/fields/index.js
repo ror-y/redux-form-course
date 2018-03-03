@@ -53,7 +53,7 @@ export const discounts = ({ fields, meta: { error } }) => (
           name={code}
           type="text"
           component={customInput}
-          label={`Code #${index + 1}`}
+          label={`Discount Code #${index + 1}`}
         />
         <button
           type="button"
