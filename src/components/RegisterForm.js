@@ -64,7 +64,7 @@ class RegisterForm extends Component {
           type="checkbox"
           label="Sign up to Newsletter?"
         />
-        <FieldArray name="discounts" component={discounts} />
+        <FieldArray name="discountCodes" component={discounts} />
         <button type="submit">Submit</button>
       </form>
     );
