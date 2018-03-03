@@ -30,11 +30,7 @@ export const customInput = props => {
     >
       <input {...input} type={type} autoFocus={props.autoFocus} />
       <label>{label}</label>
-      {meta.touched &&
-        !meta.active &&
-        meta.error && (
-          <div className="feedback-text error-text">{meta.error}</div>
-        )}
+      {(meta.error && meta.touched && !meta.active) && <div className="feedback-text error-text">{meta.error}</div>}
     </div>
   );
 };
