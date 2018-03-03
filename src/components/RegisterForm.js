@@ -20,7 +20,11 @@ class RegisterForm extends Component {
         </div>
         <div>
           <label>Sign up to newsletter?</label>
-          <Field name="newsletter" component="input" type="checkbox" />
+          <Field
+            name="newsletter"
+            component="input"
+            type="checkbox"
+          />
         </div>
         <button type="submit">Submit</button>
       </form>
