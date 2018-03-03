@@ -45,7 +45,7 @@ export const customSelect = (props) => {
   )
 }
 
-export const discounts = ({ fields, meta: { error } }) => (
+export const discounts = ({ fields }) => (
   <div className="custom-field-array-container">
     {fields.map((code, index) => (
       <div key={index} className="field-array-item">
@@ -62,7 +62,6 @@ export const discounts = ({ fields, meta: { error } }) => (
         >Remove code</button>
       </div>
     ))}
-    {error && <div className="error">{error}</div>}
     <button type="button" onClick={() => fields.push()}>
       Add {!fields.length ? 'Discount Code' : 'Another'}
     </button>
