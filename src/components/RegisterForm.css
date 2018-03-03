@@ -56,7 +56,7 @@ input {
 
 input,
 label,
-button {
+button[type='submit'] {
   font-size: 20px;
 }
 
@@ -80,11 +80,11 @@ select {
 
 select,
 input:not([type='checkbox']),
-button {
+button[type='submit'] {
   width: 100%;
 }
 
-button {
+button[type='submit'] {
   background-color: orange;
   color: white;
 }
