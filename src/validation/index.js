@@ -1,5 +1,3 @@
-import { SubmissionError } from 'redux-form';
-
 export const required = value => (
   value ? undefined : "Value is required"
 );
