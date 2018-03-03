@@ -52,6 +52,7 @@ input:not([type="checkbox"]):focus + label,
 
 input {
   outline: 0;
+  padding: 0;
 }
 
 input,
@@ -102,6 +103,7 @@ button {
   background-color: red;
   color: white;
   margin-top: 10px;
+  position: relative;
 }
 
 .error-text::before {
@@ -113,5 +115,27 @@ button {
   border-width: 0 8px 8px 7px;
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: -8px;
+}
+
+@keyframes grey-pulse {
+  0% { border-color: grey; }
+  50% { border-color: #eee; }
+  100% { border-color: grey; }
+}
+
+.async-validating input {
+  border-color: gray;
+  animation-name: grey-pulse;  
+  animation-iteration-count: infinite;  
+  animation-duration: 1.4s; 
+}
+
+.field-array-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-array-item button {
+  align-self: center;
 }
