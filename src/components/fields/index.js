@@ -1,5 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
+import { Field } from 'redux-form';
 
 const getValidityClassName = meta => {
   if (meta.asyncValidating) {
@@ -43,3 +44,27 @@ export const customSelect = (props) => {
     </div>
   )
 }
+
+export const discounts = ({ fields, meta: { error } }) => (
+  <div className="custom-field-array-container">
+    {fields.map((code, index) => (
+      <div key={index} className="field-array-item">
+        <Field
+          name={code}
+          type="text"
+          component={customInput}
+          label={`Code #${index + 1}`}
+        />
+        <button
+          type="button"
+          title="Remove"
+          onClick={() => fields.remove(index)}
+        >Remove code</button>
+      </div>
+    ))}
+    {error && <div className="error">{error}</div>}
+    <button type="button" onClick={() => fields.push()}>
+      Add {!fields.length ? 'Discount Code' : 'Another'}
+    </button>
+  </div>
+)
