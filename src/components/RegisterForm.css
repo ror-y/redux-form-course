@@ -71,7 +71,7 @@ label {
 .custom-input-container,
 .custom-select-container {
   position: relative;
-  margin: 25px 0;
+  margin: 0 0 25px 0;
 }
 
 select {
