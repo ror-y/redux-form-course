@@ -7,7 +7,7 @@ import {
   maxLength,
   matchesPassword
 } from '../validation';
-import './RegisterForm.css'
+import './RegisterForm.css';
 
 class RegisterForm extends Component {
   render() {
