@@ -138,5 +138,5 @@ button[type="submit"] {
 }
 
 .field-array-item button {
-  align-self: center;
+  align-self: start;
 }

@@ -59,7 +59,7 @@ export const discounts = ({ fields }) => (
           type="button"
           title="Remove"
           onClick={() => fields.remove(index)}
-        >Remove code</button>
+        >&times;</button>
       </div>
     ))}
     <button type="button" onClick={() => fields.push()}>
