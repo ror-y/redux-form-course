@@ -52,6 +52,7 @@ input:not([type='checkbox']):focus + label,
 
 input {
   outline: 0;
+  padding: 0;
 }
 
 input,
@@ -102,6 +103,7 @@ button[type='submit'] {
   background-color: red;
   color: white;
   margin-top: 10px;
+  position: relative;
 }
 
 .error-text::before {
@@ -113,5 +115,5 @@ button[type='submit'] {
   border-width: 0 8px 8px 7px;
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: -8px;
 }
