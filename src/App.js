@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import RegisterForm from './components/RegisterForm';
 
 class RegisterFormContainer extends Component {
-  submit = (values) => {
+  submit = values => {
     console.log(values);
-  }
+  };
 
   render() {
-    return (
-      <RegisterForm onSubmit={this.submit} />
-    );
+    return <RegisterForm onSubmit={this.submit} />;
   }
 }
 
