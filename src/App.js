@@ -3,7 +3,7 @@ import RegisterForm from './components/RegisterForm';
 
 class RegisterFormContainer extends Component {
   submit = values => {
-    console.log(values);
+    window.alert(JSON.stringify(values, null, 4));
   };
 
   getInitialValues() {
