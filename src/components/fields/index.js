@@ -5,7 +5,7 @@ export const customInput = props => {
   return (
     <div>
       <label>{props.label}</label>
-      <input {...props.input} type={props.type} />
+      <input {...props.input} type={type} />
       {meta.touched && (
         <div style={{ color: 'red' }}>{meta.error}</div>
       )}
