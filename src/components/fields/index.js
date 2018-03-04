@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactJson from 'react-json-view';
 
-export const customInput = (props) => {
+export const customInput = props => {
   return (
     <div>
       <label>{props.label}</label>
       <input {...props.input} type={props.type} />
       <ReactJson src={props.meta} />
     </div>
-  )
-}
+  );
+};
 
-export const customSelect = (props) => {
+export const customSelect = props => {
   return (
     <div>
       <label>{props.label}</label>
@@ -21,5 +21,5 @@ export const customSelect = (props) => {
       </select>
       <ReactJson src={props.meta} />
     </div>
-  )
-}
+  );
+};
