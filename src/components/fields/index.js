@@ -6,30 +6,36 @@ const getValidityClassName = meta => {
     return;
   }
   if (meta.touched && meta.invalid) {
-    return "invalid";
+    return 'invalid';
   }
   if (meta.touched && meta.valid) {
-    return "valid";
+    return 'valid';
   }
-}
+};
 
-export const customInput = (props) => {
+export const customInput = props => {
   const { label, input, type, meta } = props;
   return (
-    <div className={cx(
-      "custom-input-container",
-      { "flex-row-reverse": type === "checkbox" },
-      { "dirty": meta.dirty },
-      getValidityClassName(meta))}
+    <div
+      className={cx(
+        'custom-input-container',
+        { 'flex-row-reverse': type === 'checkbox' },
+        { dirty: meta.dirty },
+        getValidityClassName(meta)
+      )}
     >
       <input {...input} type={type} />
       <label>{label}</label>
-      {(meta.error && meta.touched && !meta.active) && <div className="feedback-text error-text">{meta.error}</div>}
+      {meta.error &&
+        meta.touched &&
+        !meta.active && (
+          <div className="feedback-text error-text">{meta.error}</div>
+        )}
     </div>
-  )
-}
+  );
+};
 
-export const customSelect = (props) => {
+export const customSelect = props => {
   return (
     <div className="custom-select-container">
       <label>{props.label}</label>
@@ -38,5 +44,5 @@ export const customSelect = (props) => {
         <option value="spaces">Spaces</option>
       </select>
     </div>
-  )
-}
+  );
+};
