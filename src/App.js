@@ -4,7 +4,7 @@ import { asyncUsernameCheck } from './validation';
 
 class RegisterFormContainer extends Component {
   submit = values => {
-    console.log(values);
+    window.alert(JSON.stringify(values, null, 4));
     asyncUsernameCheck(values);
   };
 
