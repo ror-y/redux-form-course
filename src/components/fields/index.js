@@ -1,18 +1,24 @@
 import React from 'react';
 
-export const customInput = (props) => {
+export const customInput = props => {
   const { label, input, type, meta } = props;
   return (
     <div>
       <label>{label}</label>
       <input {...input} type={type} />
-      {(meta.error && meta.touched) && <div style={{ color: 'red' }}>{meta.error}</div>}
-      {(meta.warning && meta.touched) && <div style={{ color: 'goldenrod' }}>{meta.warning}</div>}
+      {meta.error &&
+        meta.touched && (
+          <div style={{ color: 'red' }}>{meta.error}</div>
+        )}
+      {meta.warning &&
+        meta.touched && (
+          <div style={{ color: 'goldenrod' }}>{meta.warning}</div>
+        )}
     </div>
-  )
-}
+  );
+};
 
-export const customSelect = (props) => {
+export const customSelect = props => {
   return (
     <div>
       <label>{props.label}</label>
@@ -21,5 +27,5 @@ export const customSelect = (props) => {
         <option value="spaces">Spaces</option>
       </select>
     </div>
-  )
-}
+  );
+};
