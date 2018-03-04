@@ -1,19 +1,19 @@
-import React from "react";
-import cx from "classnames";
-import { Field } from "redux-form";
+import React from 'react';
+import cx from 'classnames';
+import { Field } from 'redux-form';
 
 const getValidityClassName = meta => {
   if (meta.asyncValidating) {
-    return "async-validating";
+    return 'async-validating';
   }
   if (meta.active) {
     return;
   }
   if (meta.touched && meta.invalid) {
-    return "invalid";
+    return 'invalid';
   }
   if (meta.touched && meta.valid) {
-    return "valid";
+    return 'valid';
   }
 };
 
@@ -22,15 +22,19 @@ export const customInput = props => {
   return (
     <div
       className={cx(
-        "custom-input-container",
-        { "flex-row-reverse": type === "checkbox" },
+        'custom-input-container',
+        { 'flex-row-reverse': type === 'checkbox' },
         { dirty: meta.dirty },
         getValidityClassName(meta)
       )}
     >
       <input {...input} type={type} autoFocus={props.autoFocus} />
       <label>{label}</label>
-      {(meta.error && meta.touched && !meta.active) && <div className="feedback-text error-text">{meta.error}</div>}
+      {meta.error &&
+        meta.touched &&
+        !meta.active && (
+          <div className="feedback-text error-text">{meta.error}</div>
+        )}
     </div>
   );
 };
@@ -64,7 +68,7 @@ export const discounts = ({ fields }) => (
       </div>
     ))}
     <button type="button" onClick={() => fields.push()}>
-      Add {!fields.length ? "Discount Code" : "Another"}
+      Add {!fields.length ? 'Discount Code' : 'Another'}
     </button>
   </div>
 );
