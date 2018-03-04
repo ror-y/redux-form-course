@@ -68,7 +68,7 @@ export const discounts = ({ fields }) => (
       </div>
     ))}
     <button type="button" onClick={() => fields.push()}>
-      Add {!fields.length ? 'Discount Code' : 'Another'}
+      Add {!fields.length ? 'Discount Code(s)' : 'Another'}
     </button>
   </div>
 );
