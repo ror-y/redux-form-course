@@ -20,12 +20,3 @@ export const validate = values => {
   return errors;
 };
 
-export const warn = values => {
-  const warnings = {};
-
-  if (/\W/g.test(values.firstname)) {
-    warnings.firstname = 'Non-word character typed. Made a typo?';
-  }
-
-  return warnings;
-};
