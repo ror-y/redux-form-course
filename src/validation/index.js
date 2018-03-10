@@ -9,7 +9,3 @@ export const minLength = value =>
 export const maxLength = value =>
   value.length > 10 ? 'Value is too long' : undefined;
 
-export const nonWordCharacters = value =>
-  /\W/g.test(value)
-    ? 'Non-word character typed. Made a typo?'
-    : undefined;

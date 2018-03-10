@@ -10,10 +10,6 @@ export const customInput = props => {
         meta.touched && (
           <div style={{ color: 'red' }}>{meta.error}</div>
         )}
-      {meta.warning &&
-        meta.touched && (
-          <div style={{ color: 'goldenrod' }}>{meta.warning}</div>
-        )}
     </div>
   );
 };

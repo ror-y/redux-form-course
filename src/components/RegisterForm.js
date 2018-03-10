@@ -4,8 +4,7 @@ import { customInput, customSelect } from './fields';
 import {
   required,
   minLength,
-  maxLength,
-  nonWordCharacters
+  maxLength
 } from '../validation';
 
 class RegisterForm extends Component {
@@ -19,7 +18,6 @@ class RegisterForm extends Component {
           type="text"
           label="First Name"
           validate={[required]}
-          warn={[nonWordCharacters]}
         />
         <Field
           name="surname"
@@ -27,7 +25,6 @@ class RegisterForm extends Component {
           type="text"
           label="Surname"
           validate={[required]}
-          warn={[nonWordCharacters]}
         />
         <Field
           name="username"
@@ -35,7 +32,6 @@ class RegisterForm extends Component {
           type="text"
           label="Username"
           validate={[required, minLength, maxLength]}
-          warn={[nonWordCharacters]}
         />
         <Field
           name="preference"
