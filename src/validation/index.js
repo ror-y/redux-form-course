@@ -1,5 +1,3 @@
-import { SubmissionError } from 'redux-form';
-
 export const required = value =>
   value ? undefined : 'Value is required';
 
@@ -14,11 +12,3 @@ export const maxLength = value =>
 export const matchesPassword = (value, allValues) =>
   value === allValues.password ? undefined : 'Passwords must match';
 
-export const asyncUsernameCheck = values => {
-  if (['kent', 'andy', 'john', 'joel'].includes(values.username)) {
-    throw new SubmissionError({
-      username: 'Username already taken',
-      _error: 'Login failed!'
-    });
-  }
-};

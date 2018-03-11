@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import RegisterForm from './components/RegisterForm';
-import { asyncUsernameCheck } from './validation';
+import { SubmissionError } from 'redux-form';
 
 class RegisterFormContainer extends Component {
   submit = values => {
-    window.alert(JSON.stringify(values, null, 4));
-    asyncUsernameCheck(values);
+    if (['kent', 'andy', 'john', 'joel'].includes(values.username)) {
+      throw new SubmissionError({
+        username: 'Username already taken',
+        _error: 'Login failed!'
+      });
+    } else {
+      window.alert(JSON.stringify(values, null, 4));
+    }
   };
 
   getInitialValues() {
