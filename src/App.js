@@ -6,8 +6,7 @@ class RegisterFormContainer extends Component {
   submit = values => {
     if (['kent', 'andy', 'john', 'joel'].includes(values.username)) {
       throw new SubmissionError({
-        username: 'Username already taken',
-        _error: 'Login failed!'
+        username: 'Username already taken'
       });
     } else {
       window.alert(JSON.stringify(values, null, 4));
